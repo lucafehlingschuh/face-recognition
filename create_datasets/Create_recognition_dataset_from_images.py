@@ -1,8 +1,8 @@
 import cv2
 from mtcnn import MTCNN
-import Face_Detector
+from face-recognition-KIT.model import Face_Detector
 import os
-from Rescale import Rescale
+from face-recognition-KIT.model.Rescale import Rescale
 import torch.nn as nn
 import torch
 from torchvision import models

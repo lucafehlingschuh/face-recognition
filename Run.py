@@ -1,6 +1,6 @@
 import cv2
 from mtcnn import MTCNN
-from Face_Detector import Detector
+from model.Face_Detector import Detector
 from torchvision import models
 import torch.nn as nn
 import torch
@@ -24,8 +24,8 @@ if __name__ == "__main__":
         ('output', nn.Softmax(dim=1))]))
     # Load the trained weights. Here we load the model trained on the small dataset
     model.load_state_dict(
-        torch.load('FaceRecognition\model-face-recognition-dictSmallDataset.pth', map_location=torch.device('cpu')))
-    age_classifier = load_model('final_m2.h5')
+        torch.load('model\model-face-recognition-dictSmallDataset.pth', map_location=torch.device('cpu')))
+    age_classifier = load_model('age_model.h5')
     # Change to eval mode (would be training otherwise)
     model.eval()
     # Create the mtcnn

@@ -1,7 +1,7 @@
 import cv2
 from mtcnn import MTCNN
-import Face_Detector
-from Rescale import Rescale
+from face-recognition-KIT.model import Face_Detector
+from face-recognition-KIT.model.Rescale import Rescale
 
 """
 This script extracts all  faces found in a video.
